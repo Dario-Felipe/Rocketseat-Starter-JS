@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 03</title>
+</head>
+
+<style>
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+
+  ul{
+    font-size: 30px;
+  }
+</style>
+
+<body onload="mostrar()">
+  <div class="container">
+    <div class="main">
+      <div>
+        <input id="txt" type="text" name="txtname" placeholder="Digite um nome...">
+        <button class="button" name="button" onclick="adicionar()">Adicionar</button>
+      </div>
+      <div>
+        <ul class="list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var nome = ["Diego", "Gabriel", "Lucas", "Darinho", "Antoni"];
+    var txtName = document.querySelector('#txt');
+    var listElement = document.querySelector('.list');
+
+    function validarCampo() {
+      if (txtName.value != '') {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function adicionar() {
+      if (validarCampo() == true) {
+        nome.push(txtName);
+        let newElement = document.createElement('li');
+        let textList = document.createTextNode(txtName.value);
+        newElement.appendChild(textList);
+        listElement.appendChild(newElement);
+        txtName.value = "";
+        txtName.focus();
+      } else {
+        window.alert(`Preencha o campo de texto ou Nome já inserido!`);
+      }
+    }
+
+    function mostrar() {
+      for (let i = 0; i < nome.length; i++){
+        let newElement = document.createElement('li');
+        let textList = document.createTextNode(nome[i]);
+        newElement.appendChild(textList);
+        listElement.appendChild(newElement);
+      }
+    }
+  </script>
+</body>
+
+</html>

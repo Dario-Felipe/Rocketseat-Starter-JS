@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 02</title>
+</head>
+
+<style>
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-top: 15px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="main">
+      <div>
+        <button class="button" name="button" onclick="adicionar()">Adicionar</button>
+        <button class="button" name="button" onclick="remover()">Remover</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var allElement = document.querySelector('.main');
+    var newColor = getRandomColor();
+
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function hover() {
+      var boxElement = document.querySelector('.box');
+      boxElement.style.backgroundColor = newColor;
+      console.log(`A cor é ${newColor}`);
+    }
+
+    function adicionar() {
+      let newElement = document.createElement('div');
+      newElement.setAttribute('class', 'box');
+      newElement.setAttribute('onmouseover', 'hover()');
+      allElement.appendChild(newElement);
+    }
+
+    function remover() {
+      let oldElement = document.querySelector('.box');
+      allElement.removeChild(oldElement);
+    }
+  </script>
+</body>
+
+</html>

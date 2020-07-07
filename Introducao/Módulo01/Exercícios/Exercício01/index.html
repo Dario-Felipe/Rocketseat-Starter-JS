@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+
+<body>
+
+
+    <script>
+        function exibir(objeto) {
+            console.log(`O usuário mora em ${objeto.cidade} / ${objeto.uf}, no bairro ${objeto.bairro}, na rua "${objeto.rua}", com nº ${objeto.numero}.`);
+        }
+
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+        exibir(endereco);
+        
+    </script>
+</body>
+
+</html>

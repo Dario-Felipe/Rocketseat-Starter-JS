@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+
+<body>
+
+<script>
+    var usuarios = [{
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+    ];
+
+    function exibir(pessoa) {
+        for (let i = 0; i < pessoa.length; i++) {
+            console.log(`O ${pessoa[i].nome} possui as habilidades: ${pessoa[i].habilidades}`);
+        }
+    }
+    exibir(usuarios);
+</script>
+</body>
+
+</html>
