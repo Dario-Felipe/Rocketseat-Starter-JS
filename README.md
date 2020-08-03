@@ -5,7 +5,7 @@ For see all results: Inspect the page and go to 'console'.
 Remember to use this comands on terminal of project to create a nome_modules paste: (Node requesited)*
   - yarn install
   
-  - On NodeJS's pastes, to use this command: npm init .
+  - On NodeJS or ReactJS's  pastes, to use this command: npm init .
   
 Obs: Other configurations had made in the all pastes of project, so don't worry.
 
@@ -15,5 +15,6 @@ This course was divided like:
  - Introduction: Concepts 'bout the JavaScript Language and basic sintaxe like: DOM, Conditionals, Loopings. 
  - ECMAScript 6+: Explaining some concepts about ECMAScript, adding the Babel, Webpack, Async/Await, Axios and others idea with exercises.
  - NodeJS: Building a application server with MongoDB, Express with concepts about API Reste.
+ - ReactJS: New concepts about all ReactJS ecosystem and making a conection with API Rest.
  
 Continue...
